@@ -1,0 +1,77 @@
+/* Conteneur principal */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+    color: white;
+    min-height: 100vh;
+}
+
+/* En-tête */
+.home-header {
+    margin: 50px 0;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-header span {
+    color: #00d4ff;
+}
+
+.home-header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #00d4ff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.start-button:hover {
+    background: #1e90ff;
+}
+
+/* Section d'information */
+.home-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+.info-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4);
+}

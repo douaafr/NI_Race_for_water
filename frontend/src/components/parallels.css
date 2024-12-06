@@ -1,0 +1,102 @@
+/* Conteneur principal */
+.parallels-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* Image et boutons */
+.image-container {
+    position: relative;
+    flex: 2;
+    text-align: center;
+}
+
+
+.corps-image {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Boutons */
+.btn {
+    position: absolute;
+    border: 2px solid #fff;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    transform: scale(1.2);
+}
+
+/* Positions des boutons */
+.poumons {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coeur {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.foie {
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.peau {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sang {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.estomac {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.systemeNerveux {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Cadre d'informations */
+.info-container {
+    flex: 1;
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
