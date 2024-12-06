@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corps Humain Interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0f7fa;
+    }
+    h1 {
+      text-align: center;
+      color: #0077b6;
+    }
+    .info-box {
+      position: fixed;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 300px;
+      z-index: 10;
+    }
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .organ {
+      cursor: pointer;
+      transition: fill 0.3s ease;
+    }
+    .organ:hover {
+      fill: #ffcccb;
+    }
+  </style>
+</head>
+<body>
+  <h1>Le Corps Humain et l'Océan</h1>
+  <div class="info-box" id="info-box"></div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 800">
+    <!-- Corps -->
+    <path id="body" d="M250,50 L400,300 L300,600 L200,600 L100,300 Z" fill="#ffe0b2" />
+
+    <!-- Poumons -->
+    <circle id="lungs-left" class="organ" cx="200" cy="200" r="50" fill="#b3e5fc" />
+    <circle id="lungs-right" class="organ" cx="300" cy="200" r="50" fill="#b3e5fc" />
+
+    <!-- Cœur -->
+    <path id="heart" class="organ" d="M250,250 L270,270 L250,290 L230,270 Z" fill="#ff1744" />
+
+    <!-- Foie -->
+    <rect id="liver" class="organ" x="220" y="300" width="60" height="30" fill="#fbc02d" />
+  </svg>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const organs = document.querySelectorAll('.organ');
+      const infoBox = document.getElementById('info-box');
+
+      const organInfo = {
+        "lungs-left": "Les poumons produisent 70% de l'oxygène grâce au phytoplancton marin.",
+        "lungs-right": "Les océans jouent un rôle crucial dans la production d'oxygène.",
+        "heart": "Les océans absorbent 25% du CO2, protégeant indirectement votre cœur.",
+        "liver": "Les polluants marins, comme les microplastiques, affectent la santé de notre foie."
+      };
+
+      organs.forEach(organ => {
+        organ.addEventListener('mouseover', (e) => {
+          const organId = e.target.id;
+          if (organInfo[organId]) {
+            infoBox.textContent = organInfo[organId];
+            infoBox.style.display = 'block';
+            infoBox.style.top = `${e.clientY + 20}px`;
+            infoBox.style.left = `${e.clientX}px`;
+          }
+        });
+
+        organ.addEventListener('mouseout', () => {
+          infoBox.style.display = 'none';
+        });
+
+        organ.addEventListener('click', (e) => {
+          alert(`Vous avez cliqué sur ${organId}!`);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
